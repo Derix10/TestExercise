@@ -23,7 +23,7 @@ class DetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val model = requireArguments().getSerializable("key") as CarModel
+        val model = arguments?.getSerializable("key") as CarModel
         binding.tvName.text = model.name
         binding.tvYear.text = model.year
         Glide.with(binding.imgDetail)

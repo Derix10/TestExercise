@@ -34,6 +34,6 @@ class HomeFragment : Fragment() {
     fun onClick(carModel: CarModel){
         val bundle = Bundle()
         bundle.putSerializable("key", carModel)
-        findNavController().navigate(R.id.detailFragment)
+        findNavController().navigate(R.id.detailFragment, bundle)
     }
 }
